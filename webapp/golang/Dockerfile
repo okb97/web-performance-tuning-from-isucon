@@ -49,3 +49,6 @@ COPY ./templates ./templates
 
 # What the container should run when it is started.
 ENTRYPOINT [ "/bin/server" ]
+
+USER root
+RUN apt update && apt install -y procps
